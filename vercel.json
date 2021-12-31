@@ -1,6 +1,6 @@
 
 {
-    "name": "Subs API",
+    "name": "URL-Shortner",
     "version": 2,
     "builds": [{
         "src": "*py",
