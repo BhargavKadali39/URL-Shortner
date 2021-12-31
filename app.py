@@ -8,7 +8,7 @@ def home():
     url = "this is live"
     return render_template('index.html',content=url)
 
-@app.route("/result", methods=['get','post'])
+@app.route("/result", methods=['get'])
 def result():
     output = request.form.to_dict()
     name = output["name"]
