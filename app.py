@@ -7,7 +7,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route("/result", methods=['get'])
+@app.route("/result", methods=['get','post'])
 def result():
     output = request.form.to_dict()
     name = output["name"]
@@ -17,9 +17,3 @@ def result():
     return render_template('index.html',tinyy=x)
 if __name__ == '__main__':
     app.run()
-
-
-
-
-
-
