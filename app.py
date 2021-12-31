@@ -5,8 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    url = "this is live"
-    return render_template('index.html',content=url)
+    return render_template('index.html')
 
 @app.route("/result", methods=['get'])
 def result():
