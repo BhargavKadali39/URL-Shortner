@@ -17,3 +17,4 @@ def result():
     return render_template('index.html',tinyy=x)
 if __name__ == '__main__':
     app.run()
+
