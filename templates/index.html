@@ -9,19 +9,33 @@
 </head>
 <body>
     <div class="cover">
-        <div class="rennegan">
-            <h1>hello</h1>
+        <h1>URL Shortner</h1>
+        <div class="block">
             <form class="dataB" action="/result" method="post">
-                <label for="url">Enter your url</label>
-                <input type="text" name="name" id="name">
-                <input type="submit" class="submit">
+                <p>Enter your url below</p>
+                <!-- <label for="url">Enter your url</label> -->
+                <input class="holder" type="text" name="name" id="name">
+                <input class="submit" type="submit">
                 <div>
                     {% if tinyy %}
-                    <h3>{{tinyy}}</h3>
+                    <input onclick="setClipboard('{{tinyy}}')" class="outs" type="text" placeholder="" value="{{tinyy}}">
                     {% endif %}
+
                 </div>
             </form>
         </div>
     </div>
 </body>
+<script>
+    function setClipboard(value) {
+        var tempInput = document.createElement("input");
+        tempInput.value = value;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        alert('Copied to clipboard');
+    }
+</script>
 </html>
+
